@@ -1,0 +1,44 @@
+/* SEARCH */
+#search {
+  padding: 40px $gutter $gutter $gutter;
+  
+  .search_container {
+    border-bottom: 1px solid $bluegray;
+    padding: $gutter 0px;
+  }
+  
+  h2 {
+    @extend .mdb;
+    font-size: 1.5em;
+    font-weight: 800;
+    line-height: 1.3em;
+  }
+  
+  h3 {
+    @extend .mdb;
+    font-size: 1em;
+    font-weight: bold;
+  }
+    
+    a {
+      color: $darkgray;
+      text-decoration: none;
+      &:hover { color: $black; }
+    }
+  
+  .post {
+    @extend .freight;
+    padding: $gutter 0px;
+    
+    img {
+      display: block;
+      float: left;
+    }
+    
+    h4 {
+      float: left;
+      margin-left: $gutter;
+      font-size: 1.25em;
+    }
+  }
+}

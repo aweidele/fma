@@ -1,0 +1,100 @@
+/* HOMEPAGE */
+#homepage_wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  #homepage_slideshow {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    
+    .slide {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s;
+      z-index: 0;
+      
+      &.active { opacity: 1; z-index: 100; }
+      
+      img {
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+      }
+    }
+    
+  }
+  
+  #homepage_text {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    right: 0px;
+    bottom: 80px;
+    //background-color: rgba(106, 118, 122, 0.75);
+    z-index: 9000;
+    color: $white;
+    
+    @extend .freight;
+    
+    #homepage_text_container {
+      position: relative;
+      
+      .slide {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s;
+        z-index: 0;
+        
+        .slide_content {
+          background-color: rgba(darken($bluegray,39%), 0.75);
+        padding: 30px;
+        }
+        
+        &.active { opacity: 1; z-index: 100; }
+      }
+      
+      h3 {
+        font-size: 1.750em;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+        @extend .letter_spacing;
+      }
+      
+      p {
+        font-size: 1.750em;
+        margin-bottom: 0.5em;
+      }
+      
+      a {
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.750em;
+        @extend .letter_spacing;
+        
+        &:after {
+          @extend .glyphs;
+          content: "R";
+          display: inline-block;
+          font-size: 21px;
+          line-height: 21px;
+          position: relative;
+          top: 3px;
+        }
+      }
+      
+    }
+  }
+  
+}

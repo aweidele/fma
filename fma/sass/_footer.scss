@@ -1,0 +1,89 @@
+/* FOOTER */
+$footerpos: 75px;
+#wrapper_footer {
+  width: $navwidth;
+  height: $footerpos;
+  @extend .fixed;
+  bottom: 0px;
+  
+  &.homepage {
+    position: relative;
+    bottom: $footerpos;
+  }
+}
+
+#container_footer {
+  @extend .helvetica;
+  @include px2em(10);
+  color: $footergray;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  
+  .line {
+    border-bottom: 1px solid $footergray;
+    padding: 11px 0px 11px 30px;
+    
+    a {
+      color: $footergray;
+      &:hover { color: $medgray; }
+    }
+    
+    &.search { 
+      position: relative;
+      padding: 0;
+      
+      .search_container {
+        padding: 0 0 0 30px;
+        position: relative;
+        
+        
+        &:after {
+          @extend .glyphs;
+          content: "S";
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 30px;
+          top: 0px;
+          right: 5px;
+          z-index: 0;
+          font-size: 20px;
+          line-height: 30px;
+        }
+        
+        
+      }
+      
+      label { display: none; }
+      
+      input[type='text'] {
+        border: 0;
+        background: transparent;
+        width: 175px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        
+        &:focus { outline: none; }
+      }
+      
+      input[type='submit'] {
+        width: 20px;
+        height: 30px;
+        overflow: hidden;
+        border: 0px;
+        background: transparent;
+        text-indent: -999999px;
+        position: relative;
+        z-index: 300;
+      }
+      
+      //label {
+      //  position: absolute;
+      //}
+      
+    }
+    
+  }
+}

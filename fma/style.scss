@@ -1,0 +1,344 @@
+/*
+Theme Name: Fradkin McAlpin
+*/
+
+/* INITIALIZE */
+html,body,header,footer,nav,section,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,hr,a,img,table,tr,td,iframe {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  font-weight: normal;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header,footer,nav,section,iframe { display: block; }
+
+ul,ol { list-style: none; }
+.clear { clear: both; }
+a { transition: color 0.5s; }
+
+/* FONTS */
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?-kj5i72');
+  src:url('fonts/icomoon.eot?#iefix-kj5i72') format('embedded-opentype'),
+    url('fonts/icomoon.woff?-kj5i72') format('woff'),
+    url('fonts/icomoon.ttf?-kj5i72') format('truetype'),
+    url('fonts/icomoon.svg?-kj5i72#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.freight { font-family: "Freight Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+.freightmed { font-family: "Freight Sans Medium","Helvetica Neue",Helvetica,Arial,sans-serif; }
+.mdb { font-family: "MillerDisplay",Georgia,Times,serif; }
+.mdblite { font-family: "MillerDisplay Light",Georgia,Times,serif; }
+.helvetica { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+.glyphs { font-family: 'icomoon'; }
+
+
+.letter_spacing { letter-spacing: 1px; }
+
+#feedback {
+  @extend .freight;
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0,0,0,0.8);
+  color: #FFFFFF;
+  font-size: 11px;
+  padding: 5px;
+  opacity: 0.74;
+  display: none;
+}
+
+#wpadminbar { opacity: 0.8; }
+
+// Sizes
+$basefont: 16;
+@mixin px2em($size) {
+  font-size: ($size/$basefont)+em;
+}
+
+@mixin imgfull() {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// COLORS
+$lightgray: #E4E4E4;
+$lightergray: #F0F0F0;
+$footergray: #999999;
+$medgray: #555555;
+$darkgray: #333333;
+$bluegray: #D3DBDC;
+$green: #bbcc96;
+$lightblue: #c6cfd6;
+$white: #FFFFFF;
+$black: #000000;
+
+
+/* SHARE ICONS */
+$shareicons: 18px;
+ul.sharers {
+  li {
+    display: inline-block;
+    width: $shareicons;
+    height: $shareicons;
+    font-size: $shareicons;
+    line-height: $shareicons;
+    margin-right: floor($shareicons / 4);
+    position: relative;
+        
+    a {
+      span { text-indent: -999999px;
+      width: 100%;
+      height: 100%;
+      display: block; }
+        
+          
+    &:before {
+      @extend .glyphs;
+      width: $shareicons;
+      height: $shareicons;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      content: "f";
+    }
+  }
+
+    &.facebook a:before { content: "f"; }
+    &.twitter a:before { content: "T"; }
+    &.pinterest a:before { content: "p"; }
+    &.gplus a:before { content: "g"; }
+  }
+}
+
+/* LAYOUT */
+
+// dimensions
+$fullwidth: 1360px;
+$navwidth: 230px;
+$subnavwidth: round($navwidth/1.045);
+$contentwidth: $fullwidth - $navwidth;
+$gutter: 20px;
+
+$bio_spacing: 30px;
+
+// image background
+@mixin imgbg() {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: -999999px;
+}
+
+@mixin boxsize() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#wrapper { 
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 500;
+}
+
+/* CONTENT LEFT */
+#content_left {
+  width: $navwidth;
+  min-height: 100vh;
+  border-right: 1px solid $bluegray;
+  @include boxsize();
+  @extend .fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #FFFFFF;
+  
+  h1 {
+    width: 100%;
+    height: 161px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    
+    background-image: url("image/logo.svg");
+    background-position: 26px center;
+    background-repeat: no-repeat;
+    background-size: 160px 82px;
+    &:hover { opacity: 0.7; }
+    
+    a { @include imgbg(); }
+  }
+  
+  ul {
+    position: relative;
+    top: -1px;
+    li {
+      @extend .mdb;
+      @include px2em(18);
+      height: 50px;
+      border-bottom: 1px solid $lightgray;
+      background-color: $white;
+      transition: background-color 0.5s;
+      
+      &:first-child { border-top: 1px solid $lightgray; }
+      
+      a {
+        height: 100%;
+        display: block;
+        line-height: 50px;
+        
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        //padding: 17px 17px 17px 48px;
+        padding-left: 48px;
+        color: $medgray;
+      }
+      
+      &:hover,&.current-menu-item  {
+        background-color: $bluegray;
+        a { color: $black; }
+      }
+    }
+    
+    &.mobile { display: none; } 
+  }
+}
+
+/* CONTENT RIGHT */
+#content_right {
+  //width: $contentwidth;
+  margin-left: $navwidth;
+  
+  p.back_to_top {
+    @extend .freight;
+    color: $footergray;
+    font-size: 0.875em;
+    text-align: right;
+    margin-right: $bio_spacing;
+    padding-bottom: $bio_spacing - 14;
+    cursor: pointer;
+    transition: color 0.5s;
+    
+    &:hover { color: $black; }
+    
+    span:after {
+      @extend .glyphs;
+      content: "U";
+      display: inline-block;
+      font-size: 9px;
+      margin-left: 0.5em;
+    }
+  }
+}
+
+#subnav {
+  @extend .mdb;
+  min-height: 100vh;
+  
+  width: $subnavwidth;
+  background-color: $bluegray;
+  @extend .fixed;
+  top: 0px;
+  
+  #subnav_container { padding-top: 161px; }
+  
+  ul {
+    padding: 10px 40px 10px 40px;
+    li {
+      font-size: 1.125em;
+      
+      a { 
+        color: $medgray;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+        font-weight: bold;
+        
+        &:hover { color: $black; }
+      }
+      
+      &.active a {
+        color: $black;
+        &:hover { color: $medgray; }
+      }
+    }
+  }
+  
+  
+  #quote_wrapper {
+    padding: 0 40px;
+  }
+  #quote_container {
+    position: relative;
+    
+    .slide {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+      transition: opacity 1s;
+      
+      p {
+        font-size: 1.125em;
+        font-style: italic;
+        line-height: 1.3em;
+        color: $medgray;
+        margin-bottom: 0.5em;
+
+        &.attribution {
+          font-size: 0.875em;
+          width: 75%;
+          float: right;
+          text-align: right;
+          font-style: normal;
+        }
+      
+      }
+      
+      &.active { opacity: 1; }
+    }
+  }
+  
+}
+
+ul.prevnext {
+  position: absolute;
+  z-index: 200;
+  bottom: 0px;
+  right: 0px;
+      
+  li {
+    width: 32px;
+    height: 32px;
+    float: left;
+    background-color: $darkgray;
+    cursor: pointer;
+    margin-right: 2px;
+    &:last-child { margin-right: 0; }
+  }
+}  
+.icon-arrow-left,.icon-arrow-right { fill: #A0A0A0; transition: fill 0.5s; }
+.icon-arrow-left:hover,.icon-arrow-right:hover { fill: #FFFFFF; }
+
+
+@import 'sass/homepage';
+@import 'sass/studio';
+@import 'sass/news';
+@import 'sass/projects';
+@import 'sass/contact';
+@import 'sass/search';
+@import 'sass/footer';
+@import 'sass/mobile';

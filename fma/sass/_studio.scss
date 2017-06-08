@@ -1,0 +1,208 @@
+/* STUDIO */
+$studio_content: $contentwidth - $subnavwidth;
+#studio_content {
+  margin-left: $subnavwidth;
+  
+  .fma_slideshow {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 2s;
+      
+      &.active {
+        z-index: 100;
+        opacity: 1;
+      }
+      
+      p.image {
+        max-height: 765px;
+        overflow: hidden;
+        img { @include imgfull(); }
+      }
+      
+      .slide_text {
+        @extend .mdb;
+        font-size: 1.500em;
+        width: 100%;
+        background-color: $lightergray;
+        
+        p { line-height: 1.25em; }
+        
+        .padding {
+          padding: 30px;
+        }
+      }
+      
+    }
+       
+  } // #studio_content .fma_slideshow
+  
+  
+  /* STUDIO: WHO WE ARE */
+  $whoWeAreRight: floor($studio_content / 3.9);
+  $whoWeAreLeft: $studio_content - $whoWeAreRight - ($gutter*3);
+
+  section.default {
+    padding-top: 24px;
+  
+    h2 {
+      @extend .mdb;
+      font-size: 1.500em;
+      font-weight: 800;
+      line-height: 1.3em;
+    }
+  
+    p {
+      line-height: 1.3em;
+      margin-bottom: 1em;
+      font-size: 1.063em;
+    }
+  
+    .column_left {
+      @extend .freight;
+      width: 67%;
+      float: left;
+      margin-left: $bio_spacing;
+    }
+  
+    .column_right {
+      @extend .freight;
+      width: 25%;
+      float: right;
+      padding-top: 32px;
+    
+      h3 {
+        @extend .mdb;
+        font-weight: 800;
+        line-height: 1.3em;
+        font-size: 1.063em;
+      }
+    
+      li {
+        line-height: 1.3em;
+        font-size: 1.063em;
+      }
+    }
+
+  }
+  
+  /* STUDIO LEADERSHIP */
+  $teamPortrait: 24%;
+  $partnerBio: 67%;
+  #leadership {
+    margin-top: 53px;
+    margin-bottom: $gutter;
+    
+    .partner_bio {  
+      background-color: $lightergray;
+      margin-bottom: $gutter;
+      &:last-child { margin-bottom: 0; }
+      
+      .portrait {
+        width: $teamPortrait;
+        float: left;
+        
+        img { @include imgfull(); }
+      }
+      
+      .bio {
+        width: 67%;
+        float: right;
+        margin-right: $gutter*2;
+        padding: $gutter 0;
+        
+        a {
+          color: $black;
+          text-decoration: none;
+          &:hover { color: $medgray; }
+        }
+        
+        h2 {
+          @extend .mdb;
+          font-weight: bold;
+          line-height: 1.3em;
+          span { font-weight: normal; }
+        }
+        
+        p {
+          @extend .freight;
+          font-size: 1.063em;
+          margin-bottom: 1em;
+          line-height: 1.3em;
+        }
+      }
+      
+      &:nth-child(2n+0) {
+        .portrait {
+          float: right;
+          margin-right: ($gutter*1.5);
+        }
+        
+        .bio {
+          float: left;
+          margin-left: ($gutter*1.5);
+          margin-right: auto;
+        }
+      }
+      
+    } // .partner_bio
+  }
+
+  /* STUDIO TEAM */
+  #team-bios {
+    
+    p.team_group {
+      width: 100%;
+      img { @include imgfull(); }
+    }
+    
+    .bio {
+      margin: 0px $bio_spacing;
+      padding: $bio_spacing 0px;
+      border-bottom: 1px solid $black;
+      
+      .bio_content {
+        width: 66%;
+        float: left;
+        
+        h2,h3 {
+          @extend .mdb;
+          font-size: 1.250em;
+          line-height: 1.3em;
+        }
+        
+        h2 { font-weight: bold; }
+        
+        p {
+          @extend .freight;
+          line-height: 1.3em;
+          margin-bottom: 1em;
+          font-size: 1.063em;
+        }
+        
+        a {
+          color: $black;
+          text-decoration: none;
+          &:hover { color: $medgray; }
+        }
+      }
+      
+      .bio_portrait {
+        width: $teamPortrait;
+        float: right;
+        
+        img { @include imgfull(); }
+      }
+    }
+    
+  }
+} // #studio_content
