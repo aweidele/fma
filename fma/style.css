@@ -31,13 +31,13 @@ a {
   src: url("fonts/icomoon.eot?#iefix-kj5i72") format("embedded-opentype"), url("fonts/icomoon.woff?-kj5i72") format("woff"), url("fonts/icomoon.ttf?-kj5i72") format("truetype"), url("fonts/icomoon.svg?-kj5i72#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-.freight, #feedback, #content_right p.back_to_top, #homepage_wrapper #homepage_text, #studio_content section.default .column_left, #studio_content section.default .column_right, #studio_content #leadership .partner_bio .bio p, #studio_content #team-bios .bio .bio_content p, #news_top ul li, #project_top ul li, #news_posts .post p.info, #news_post .news_column, #project_posts .project p, #project_list .project_list_column, #project_list .project_expanded, #single_project_top #single_project_title .slideshow_controls ul.backnext li, #single_project_content, #search .post {
+.freight, #feedback, #content_right p.back_to_top, #homepage_wrapper #homepage_text, #studio_content section.default .column_left, #studio_content section.default .column_right, #studio_content #leadership .partner_bio .bio p, #studio_content #team-bios .bio .bio_content p, #news_top ul li, #project_top ul li, #news_posts .post p.info, #news_post .news_column, #project_posts .project p, #project_list .project_list_column, #project_list .project_expanded, #single_project_top #single_project_title .slideshow_controls ul.backnext li, #single_project_content, #contact_content section p, #contact_content section ul, #search .post {
   font-family: "Freight Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
 
-.freightmed, #news_post .news_column h3, #project_list .project_list_row.project_list_head .project_list_column, #single_project_content #single_project_main h3, #single_project_content #single_project_right h3 {
+.freightmed, #news_post .news_column h3, #project_list .project_list_row.project_list_head .project_list_column, #single_project_content #single_project_main h3, #single_project_content #single_project_right h3, #contact_content section h3 {
   font-family: "Freight Sans Medium","Helvetica Neue",Helvetica,Arial,sans-serif; }
 
-.mdb, #content_left ul li, #subnav, #studio_content .fma_slideshow .slide .slide_text, #studio_content section.default h2, #studio_content section.default .column_right h3, #studio_content #leadership .partner_bio .bio h2, #studio_content #leadership .partner_bio .bio #news_posts .post p.quote_attribution, #news_posts .post #studio_content #leadership .partner_bio .bio p.quote_attribution, #studio_content #team-bios .bio .bio_content h2, #studio_content #team-bios .bio .bio_content #news_posts .post p.quote_attribution, #news_posts .post #studio_content #team-bios .bio .bio_content p.quote_attribution, #studio_content #team-bios .bio .bio_content h3, #news_top h2, #project_top h2, #news_posts .post h2, #news_posts .post p.quote_attribution, #project_posts .project h3, #single_project_top #single_project_title h2, #single_project_top #single_project_title #news_posts .post p.quote_attribution, #news_posts .post #single_project_top #single_project_title p.quote_attribution, #single_project_content #single_project_main h2, #single_project_content #single_project_main #news_posts .post p.quote_attribution, #news_posts .post #single_project_content #single_project_main p.quote_attribution, #search h2, #search h3 {
+.mdb, #content_left ul li, #subnav, #studio_content .fma_slideshow .slide .slide_text, #studio_content section.default h2, #studio_content section.default .column_right h3, #studio_content #leadership .partner_bio .bio h2, #studio_content #leadership .partner_bio .bio #news_posts .post p.quote_attribution, #news_posts .post #studio_content #leadership .partner_bio .bio p.quote_attribution, #studio_content #team-bios .bio .bio_content h2, #studio_content #team-bios .bio .bio_content #news_posts .post p.quote_attribution, #news_posts .post #studio_content #team-bios .bio .bio_content p.quote_attribution, #studio_content #team-bios .bio .bio_content h3, #news_top h2, #project_top h2, #news_posts .post h2, #news_posts .post p.quote_attribution, #project_posts .project h3, #single_project_top #single_project_title h2, #single_project_top #single_project_title #news_posts .post p.quote_attribution, #news_posts .post #single_project_top #single_project_title p.quote_attribution, #single_project_top #single_project_mobile_title h2, #single_project_top #single_project_mobile_title #news_posts .post p.quote_attribution, #news_posts .post #single_project_top #single_project_mobile_title p.quote_attribution, #single_project_content #single_project_main h2, #single_project_content #single_project_main #news_posts .post p.quote_attribution, #news_posts .post #single_project_content #single_project_main p.quote_attribution, #contact_content section h2, #search h2, #search h3 {
   font-family: "MillerDisplay",Georgia,Times,serif; }
 
 .mdblite {
@@ -46,7 +46,7 @@ a {
 .helvetica, #container_footer {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
-.glyphs, ul.sharers li a:before, #content_right p.back_to_top span:after, #homepage_wrapper #homepage_text #homepage_text_container a:after, #news_top ul.newsPrevnext li:first-child a:before, #project_top ul.newsPrevnext li:first-child a:before, #news_top ul.newsPrevnext li:last-child a:after, #project_top ul.newsPrevnext li:last-child a:after, #project_top ul.project_view li a:before, #project_posts .project .thumbnails ul.nextprev li:after, #project_list .project_list_row.project_list_head .project_list_column .project_list_content :after, #single_project_top #single_project_slideshow ul.project_slideshow_prevnext li:after, #container_footer .line.search .search_container:after {
+.glyphs, ul.sharers li a:before, #content_right p.back_to_top span:after, #homepage_wrapper #homepage_text #homepage_text_container a:after, #news_top ul.newsPrevnext li:first-child a:before, #project_top ul.newsPrevnext li:first-child a:before, #news_top ul.newsPrevnext li:last-child a:after, #project_top ul.newsPrevnext li:last-child a:after, #project_top ul.project_view li a:before, #project_posts .project .thumbnails ul.nextprev li:after, #project_list .project_list_row.project_list_head .project_list_column .project_list_content :after, #single_project_top #single_project_slideshow ul.project_slideshow_prevnext li:after, #container_footer .line.search .search_container:after, #mobile_toolbar ul li a:before {
   font-family: 'icomoon'; }
 
 .letter_spacing, #homepage_wrapper #homepage_text #homepage_text_container h3, #homepage_wrapper #homepage_text #homepage_text_container a, #news_posts .post p.info {
@@ -267,6 +267,8 @@ ul.prevnext {
       opacity: 0;
       transition: opacity 1s;
       z-index: 0; }
+      #homepage_wrapper #homepage_slideshow .slide a {
+        display: block; }
       #homepage_wrapper #homepage_slideshow .slide.active {
         opacity: 1;
         z-index: 100; }
@@ -274,8 +276,10 @@ ul.prevnext {
         width: auto;
         height: auto;
         min-width: 100%;
-        min-height: 100%;
+        min-height: 100vh;
         display: block; }
+        #homepage_wrapper #homepage_slideshow .slide img.homepage_mobile {
+          display: none; }
   #homepage_wrapper #homepage_text {
     position: fixed;
     width: 500px;
@@ -602,6 +606,8 @@ ul.prevnext {
       margin-bottom: 10px; }
       #news_post .news_gallery img:last-child {
         margin-bottom: 0; }
+  #news_post #mobile_title {
+    display: none; }
 
 /* PROEJECTS */
 #project_top .project_top_left {
@@ -969,7 +975,7 @@ ul.prevnext {
     line-height: 1em;
     margin-left: 250px;
     margin-top: 15px;
-    width: 50%;
+    width: 48%;
     float: left; }
   #single_project_top #single_project_title .slideshow_controls {
     width: 150px;
@@ -997,6 +1003,8 @@ ul.prevnext {
           text-decoration: none; }
           #single_project_top #single_project_title .slideshow_controls ul.backnext li a:hover {
             color: #000000; }
+#single_project_top #single_project_mobile_title {
+  display: none; }
 
 #single_project_content {
   margin-left: 20px;
@@ -1040,6 +1048,31 @@ ul.prevnext {
         content: " | "; }
       #single_project_content #single_project_right ul.tags li:last-child:after {
         content: ""; }
+
+/* CONTACT */
+#contact_content {
+  margin-left: 220px; }
+  #contact_content section {
+    padding: 20px;
+    background-color: #F0F0F0; }
+    #contact_content section:nth-child(2n+0) {
+      background-color: #FFFFFF; }
+    #contact_content section h2, #contact_content section #news_posts .post p.quote_attribution, #news_posts .post #contact_content section p.quote_attribution {
+      font-weight: bold;
+      font-size: 1.250em; }
+    #contact_content section h3 {
+      font-size: 1.063em;
+      line-height: 1.3em; }
+    #contact_content section p, #contact_content section ul {
+      font-size: 1.063em;
+      margin-bottom: 1em;
+      line-height: 1.3em;
+      color: #000000; }
+    #contact_content section a {
+      color: #000000;
+      text-decoration: none; }
+      #contact_content section a:hover {
+        color: #555555; }
 
 /* SEARCH */
 #search {
@@ -1129,6 +1162,34 @@ ul.prevnext {
         position: relative;
         z-index: 300; }
 
+#mobile_toolbar {
+  display: none; }
+
+/* tablet landscape */
+@media screen and (max-width: 1025px) {
+  #subnav {
+    display: none; }
+
+  #studio_content, #contact_content {
+    margin-left: 0; }
+
+  #project_list .project_list_column {
+    font-size: 0.8em; }
+
+  #news_posts .post {
+    width: 49%;
+    margin-right: 1%; } }
+/* tablet portrait */
+@media screen and (max-width: 1000px) {
+  #news_top ul li, #project_top ul li, #project_top ul li {
+    font-size: 0.8em; }
+
+  #project_list .project_list_column {
+    width: 20%; }
+    #project_list .project_list_column.project_title {
+      width: 40%; }
+    #project_list .project_list_column .project_list_content {
+      padding: 0px 6px; } }
 /* phone landscape */
 @media screen and (max-width: 760px) {
   .mobile_clear {
@@ -1136,40 +1197,241 @@ ul.prevnext {
 
   #content_left {
     min-height: 0;
-    position: static;
     width: 100%;
     height: 90px; }
     #content_left h1 {
       width: 156px;
       height: 90px;
       background-size: 116px 60px;
+      background-position: 16px center;
       float: left; }
     #content_left nav {
-      width: 31px;
+      width: 96px;
       height: 90px;
       float: right;
       background-image: url("image/hamburger.svg");
+      background-position: center 47px;
       background-repeat: no-repeat;
       background-size: 31px 31px; }
+    #content_left ul {
+      width: 200px;
+      background-color: #333333;
+      position: fixed;
+      top: 90px;
+      right: -257px;
+      z-index: 999999;
+      transition: right 0.5s;
+      min-height: 100vh; }
+      #content_left ul.browser {
+        display: none; }
+      #content_left ul.mobile {
+        display: block; }
+      #content_left ul.navopen {
+        right: 0px; }
+      #content_left ul li {
+        background-color: transparent;
+        padding-left: none;
+        font-size: 1em;
+        height: 40px; }
+        #content_left ul li a {
+          color: #FFFFFF;
+          padding-left: 22px;
+          padding-right: 22px;
+          line-height: 40px; }
+        #content_left ul li.email a, #content_left ul li.phone a, #content_left ul li.map a {
+          position: relative;
+          left: -8px; }
+          #content_left ul li.email a:before, #content_left ul li.phone a:before, #content_left ul li.map a:before {
+            content: "P";
+            display: inline-block;
+            font-size: 38px;
+            line-height: 40px;
+            float: left; }
+            #content_left ul li.email a:before span, #content_left ul li.phone a:before span, #content_left ul li.map a:before span {
+              display: inline-block;
+              float: left; }
+        #content_left ul li.email a:before {
+          content: "m"; }
+        #content_left ul li.phone a:before {
+          content: "P"; }
+        #content_left ul li.map a:before {
+          content: "M"; }
+        #content_left ul li.copyright {
+          font-size: 10px;
+          height: auto;
+          line-height: 12px;
+          color: #E4E4E4;
+          text-align: center;
+          border-bottom: 0;
+          padding-top: 5px; }
 
   /* HOMEPAGE */
   #content_right {
     width: 100%;
-    margin: 0; }
+    margin-left: 0;
+    padding-top: 90px; }
+    #content_right.homepage {
+      padding-top: 0;
+      min-height: 100vh;
+      background-color: rgba(103, 126, 129, 0.75); }
 
-  #homepage_wrapper #homepage_slideshow .slide {
-    top: 0 !important;
-    left: 0 !important; }
-    #homepage_wrapper #homepage_slideshow .slide img {
-      min-width: 0;
-      min-height: 0;
+  #homepage_wrapper {
+    height: auto !important;
+    padding-top: 90px; }
+    #homepage_wrapper #homepage_slideshow {
+      height: auto;
+      min-height: 173px; }
+      #homepage_wrapper #homepage_slideshow .slide {
+        top: 0 !important;
+        left: 0 !important; }
+        #homepage_wrapper #homepage_slideshow .slide img {
+          min-width: 0;
+          min-height: 0;
+          max-height: 480px;
+          width: 100%;
+          height: auto; }
+          #homepage_wrapper #homepage_slideshow .slide img.homepage_browser {
+            display: none; }
+          #homepage_wrapper #homepage_slideshow .slide img.homepage_mobile {
+            display: block; }
+    #homepage_wrapper #homepage_text {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      z-index: 0;
+      width: 100%; }
+      #homepage_wrapper #homepage_text #homepage_text_container .slide .slide_content {
+        padding: 10px;
+        background: transparent; }
+      #homepage_wrapper #homepage_text #homepage_text_container h3, #homepage_wrapper #homepage_text #homepage_text_container p {
+        font-size: 1em; }
+
+  footer {
+    display: none; }
+
+  #mobile_toolbar {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #FFFFFF; }
+    #mobile_toolbar ul li {
+      width: 33%;
+      height: 32px;
+      float: left; }
+      #mobile_toolbar ul li a {
+        border-right: 1px solid #000000;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #555555; }
+        #mobile_toolbar ul li a span {
+          display: block;
+          text-indent: -999999px;
+          position: absolute; }
+        #mobile_toolbar ul li a:before {
+          content: "P";
+          display: block;
+          width: 100%;
+          text-align: center;
+          line-height: 32px;
+          font-size: 38px; }
+      #mobile_toolbar ul li:last-child a {
+        border-right: 0; }
+      #mobile_toolbar ul li.email a:before {
+        content: "m"; }
+      #mobile_toolbar ul li.phone a:before {
+        content: "P"; }
+      #mobile_toolbar ul li.map a:before {
+        content: "M"; }
+
+  #contact_content #map-canvas {
+    max-height: 210px; } }
+/* @media screen and (max-width: 760px) */
+/* small tablet */
+@media screen and (max-width: 600px) {
+  #studio_content section.default .column_left, #studio_content section.default .column_right {
+    width: auto;
+    margin: 0 20px;
+    float: none; }
+  #studio_content #leadership .partner_bio .portrait,
+  #studio_content #leadership .partner_bio .bio, #studio_content #leadership .partner_bio:nth-child(2n) .portrait, #studio_content #leadership .partner_bio:nth-child(2n) .bio {
+    float: none;
+    margin-left: 20px;
+    margin-right: 20px; }
+  #studio_content #leadership .partner_bio .bio, #studio_content #leadership .partner_bio:nth-child(2n) .bio {
+    width: auto; }
+  #studio_content #leadership .partner_bio .portrait, #studio_content #leadership .partner_bio:nth-child(2n) .portrait {
+    width: 56%; }
+  #studio_content #team-bios .bio {
+    margin: 20px;
+    padding: 0; }
+    #studio_content #team-bios .bio .bio_content {
       width: 100%;
-      height: auto; }
-      #homepage_wrapper #homepage_slideshow .slide img.homepage_browser {
-        display: none; }
-      #homepage_wrapper #homepage_slideshow .slide img.homepage_mobile {
-        display: block; }
-  #homepage_wrapper #homepage_text {
-    position: relative;
-    top: auto;
-    right: auto; } }
+      float: none;
+      padding-top: 20px; }
+    #studio_content #team-bios .bio .bio_portrait {
+      width: 56%;
+      float: none; }
+  #studio_content #professional-community-involvement .column_right {
+    display: none; }
+
+  #project_top, #news_top, #project_top {
+    display: none; }
+
+  #project_posts {
+    margin-top: 0; }
+    #project_posts .project .project_container {
+      margin-right: 0;
+      width: 100%;
+      float: none; }
+    #project_posts .project h3, #project_posts .project p {
+      margin-left: 20px;
+      margin-right: 20px; }
+
+  #single_project_top #single_project_title {
+    display: none; }
+  #single_project_top #single_project_slideshow {
+    margin-top: 0; }
+    #single_project_top #single_project_slideshow ul.project_slideshow_prevnext {
+      display: none; }
+  #single_project_top #single_project_mobile_title {
+    background-color: #D3DBDC;
+    padding: 20px;
+    display: block; }
+    #single_project_top #single_project_mobile_title h2, #single_project_top #single_project_mobile_title #news_posts .post p.quote_attribution, #news_posts .post #single_project_top #single_project_mobile_title p.quote_attribution {
+      font-weight: bold;
+      font-size: 1.25em; }
+
+  #single_project_content {
+    padding: 0;
+    margin: 20px; }
+    #single_project_content #single_project_main, #single_project_content #single_project_right {
+      width: 100%;
+      float: none; }
+
+  #news_posts {
+    margin-top: 0px; }
+    #news_posts .post {
+      width: 100%;
+      margin-right: 0; }
+      #news_posts .post.abs {
+        position: static; }
+
+  #news_post {
+    margin-top: 0px; }
+    #news_post #mobile_title {
+      display: block;
+      background-color: #D3DBDC;
+      padding: 20px; }
+      #news_post #mobile_title h2, #news_post #mobile_title #news_posts .post p.quote_attribution, #news_posts .post #news_post #mobile_title p.quote_attribution {
+        font-weight: bold;
+        font-size: 1.25em; }
+    #news_post .news_column, #news_post .news_gallery {
+      width: auto;
+      margin: 20px;
+      float: none; } }

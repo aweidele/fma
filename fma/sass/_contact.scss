@@ -1,0 +1,36 @@
+/* CONTACT */
+#contact_content {
+  margin-left: $subnavwidth;
+  
+  section {
+    padding: $gutter;
+    background-color: $lightergray;
+    &:nth-child(2n+0) { background-color: $white; }
+    
+    h2 {
+      @extend .mdb;
+      font-weight: bold;
+      font-size: 1.250em;
+    }
+  
+    h3 {
+      @extend .freightmed;
+      font-size: 1.063em;
+      line-height: 1.3em;
+    }
+    
+    p,ul {
+      @extend .freight;
+      font-size: 1.063em;
+      margin-bottom: 1em;
+      line-height: 1.3em;
+      color: $black;
+    }
+    
+    a {
+      color: $black;
+      text-decoration: none;
+      &:hover { color: $medgray; }
+    }
+  }
+}

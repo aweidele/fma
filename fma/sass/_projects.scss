@@ -463,7 +463,7 @@ $ptitle_height: 51px;
       line-height: 1em;
       margin-left: $navwidth + $gutter;
       margin-top: 15px;
-      width: 50%;
+      width: 48%;
       float: left;
     }
     
@@ -502,6 +502,11 @@ $ptitle_height: 51px;
       
     }
     
+  }
+  
+  #single_project_mobile_title { 
+    display: none;
+    h2 { @extend .mdb; } 
   }
 }
 

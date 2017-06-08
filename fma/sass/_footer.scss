@@ -87,3 +87,10 @@ $footerpos: 75px;
     
   }
 }
+
+#mobile_toolbar { 
+  display: none;
+  ul {  
+    li a:before { @extend .glyphs; }
+  }
+}
