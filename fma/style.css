@@ -29,6 +29,10 @@ a {
   transition: color 0.5s;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 /* FONTS */
 @font-face {
   font-family: 'icomoon';
