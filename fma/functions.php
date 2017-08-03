@@ -8,7 +8,7 @@ add_theme_support('html5', array('search-form'));
 function theme_name_scripts() {
     //wp_enqueue_style( 'fonts', '//cloud.webtype.com/css/1b7cfdf0-9828-4ed8-b99b-ccab8b975185.css');
 	wp_enqueue_style( 'fonts', '//fast.fonts.net/cssapi/e64835e4-ce1a-486d-8414-bc9d3ec7ae11.css');
-	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'main-style', get_stylesheet_uri(), array(), strval(filemtime(get_template_directory()."/style.css")) );
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/script.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'touchswipe', get_template_directory_uri() . '/inc/jquery.touchSwipe.min.js', array('jquery'), '1.0.0', true );
 }
@@ -31,6 +31,7 @@ function register_my_menu() {
 	add_image_size('Project Single',1130,640,true);
 	add_image_size('Homepage',1600,999999);
 	add_image_size('Homepage Mobile',480,253,true);
+	add_image_size('Mobile Unlimited',480,999999);
 	
 	/* RETINA */
 	add_image_size('Retina Studio Slideshow',2400,1226,true);
@@ -327,4 +328,61 @@ function my_manage_project_columns($column, $post_id) {
   }
 }
 
+/*** Shortcodes ***/
+global $columnCount, $currentCount;
+
+function fma_columns( $atts, $content = null )
+{
+	global $columnCount, $currentCount;
+	$columnCount = substr_count(strtolower($content), "[column]");
+	$currentCount = 0;
+	return "<div>" . do_shortcode($content) . "<div class='clearFloats'></div></div>";
+}
+add_shortcode('columns', 'fma_columns');
+
+function fma_column( $atts, $content = null )
+{
+	global $columnCount, $currentCount;
+	$first = $currentCount == 0;
+	$currentCount++;
+	$last = $currentCount == $columnCount;
+	
+	$class = "column_$columnCount";
+	
+	if( $first )
+	{
+		$class .= " column_first";
+	}
+	
+	if( $last )
+	{
+		$currentCount = 0;
+		$class .= " column_last";
+	}
+
+	$content = trim($content);
+	if( substr($content, 0, 4) == "<br>" )
+	{
+		$content = substr($content, 4);
+	}
+	
+	if( substr($content, 0, 6) == "<br />" )
+	{
+		$content = substr($content, 6);
+	}
+
+	//
+	// Set header
+	//
+	$output = "<div class='$class'>" . do_shortcode($content) . "</div>";
+	
+	return $output;
+}
+add_shortcode('column', 'fma_column');
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
 ?>

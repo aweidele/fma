@@ -35,7 +35,7 @@ $tags = get_the_tags();
       </div>
     </div>
     <div class="fma_slideshow" id="single_project_slideshow">
-    <input type="hidden" name="studioSlideshowSpeed" value="2000" />
+    <input type="hidden" name="studioSlideshowSpeed" value="0" />
 <?php 
 $active = " active"; 
 foreach($gallery as $image) { 

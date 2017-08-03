@@ -20,11 +20,11 @@ foreach($childPages as $childPage) {
     $right_content = get_field('right_content',$childID);
 ?>
           <div class="column_left">
-<?php echo wpautop($childPage->post_content); ?>
+<?php echo do_shortcode(wpautop($childPage->post_content)); ?>
           </div>
           <div class="column_right">
             <h3><?php echo get_field('right_content_header',$childID); ?></h3>
-<?php echo wpautop($right_content); ?>
+<?php echo do_shortcode(wpautop($right_content)); ?>
           </div>
           <div class="clear"></div>
 <?php break;
@@ -51,8 +51,10 @@ foreach($childPages as $childPage) {
 <?php } // END CHILDPAGES LOOP
 } // END showChildPageContent FUNCTION
 
-function childPageMenu($childPages) { ?>
-        <ul>
+function childPageMenu($childPages) { 
+	if( count($childPages) == 0 ){ return; } 	
+?>
+        <ul class="nested child-pages">
 <?php foreach($childPages as $childPage) { ?>
           <li><a href="#<?php echo $childPage->post_name; ?>"><?php echo $childPage->post_title; ?></a></li>
 <?php } ?>

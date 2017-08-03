@@ -1,7 +1,5 @@
 /* CONTACT */
 #contact_content {
-  margin-left: $subnavwidth;
-  
   section {
     padding: $gutter;
     background-color: $lightergray;
@@ -11,6 +9,7 @@
       @extend .mdb;
       font-weight: bold;
       font-size: 1.250em;
+	  -webkit-text-size-adjust: 100%;
     }
   
     h3 {

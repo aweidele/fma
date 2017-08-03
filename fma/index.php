@@ -1,23 +1,15 @@
 <?php get_header(); 
-$ppp = get_option( 'page_for_posts' );
-$categories = get_categories();
-if(is_category()) {
-  $thisCat = get_category( get_query_var( 'cat' ) );
+
+include('inc/news-header.php');
+
+$instagram = array();	
+if(function_exists("instagram_access_fetch")&&is_home())
+{
+	global $wp_query;
+	
+	$instagram = instagram_access_fetch($wp_query->post_count - 1);
 }
-?>
-    <section id="news_top">
-      <div id="news_container">
-        <h2><?php echo get_the_title($ppp); ?></h2>
-        <ul class="categories">
-<?php foreach($categories as $cat) { ?>
-          <li<?php if(is_object($thisCat) && $thisCat->slug == $cat->slug) { echo ' class="catActive"'; } ?>><a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name; ?></a></li>
-<?php } ?>
-          <li<?php if(!is_object($thisCat)) { echo ' class="catActive"'; } ?>><a href="<?php echo get_permalink($ppp); ?>">View All</a></li>
-        </ul>
-      </div>
-    </section>
-    <section id="news_posts">
-<?php
+$instagramIndex = 0;
 if(have_posts()): while(have_posts()): the_post(); 
 $thumb = get_the_post_thumbnail(get_the_ID(),'News Featured');
 $readmore = get_field('read_more');
@@ -66,8 +58,32 @@ foreach($post_cats as $c) {
           <p class="info"><?php echo get_the_date(); ?> | <?php echo implode(', ',$cats); ?></p>
         </div>
       </div>
-
 <?php
+	if($instagramIndex < sizeof($instagram))
+	{
+		$iPost = $instagram[$instagramIndex];
+	?>
+		<div class="post">
+			<p class="thumbnail">
+				<a href='<?= $iPost['link'] ?>' target='_blank'>
+					<img src='<?= $iPost['images']['standard_resolution']['url'] ?>' />
+				</a>
+			</p>
+			<div class="post_container">
+				<a href='<?= $iPost['link'] ?>' target='_blank'>
+					<b><?= $iPost['user']['username'] ?></b>
+					<?= $iPost['caption']['text'] ?>
+				</a>
+				<div class="instagram">
+					<span class="comments"><?= $iPost['comments']['count'] ?></span>
+					<span class="likes"><?= $iPost['likes']['count'] ?></span>
+				</div>
+			</div>				
+		</div>
+	<?php
+		$instagramIndex++;
+	}
+
 endwhile;
 endif;
 ?>

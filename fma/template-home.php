@@ -8,25 +8,34 @@
       <input type="hidden" name="speed" value="<?php echo get_field('gallery_1_speed'); ?>" />
 <?php
 $slideshow = get_field('homepage_gallery');
-echo "<!-- "; print_r($slideshow); echo " -->";
-$a = " active";
+$a = " ";
 foreach($slideshow as $slide) {
   
   $permalink = get_permalink($slide['project']);
   $thumbnail = '<img src="'.$slide['project_image']['sizes']['Homepage'].'" class="homepage_browser" /><input type="hidden" value="'.$slide['project_image']['sizes']['Retina Homepage'].'" name="retina" />';
-  $thumbnail_mobile = '<img src="'.$slide['project_image']['sizes']['Homepage Mobile'].'" class="homepage_mobile" />';
+  $defaultMobile = $slide['project_image']['sizes']['Homepage Mobile'];
+  $landscape = $slide['mobile_landscape'] ? $slide['mobile_landscape']['sizes']['Mobile Unlimited'] : $defaultMobile;
+  $portrait = $slide['mobile_portrait'] ? $slide['mobile_portrait']['sizes']['Mobile Unlimited'] : $defaultMobile;
+  $thumbnail_mobile = '<img src="'.$landscape.'" class="homepage_mobile landscape_mobile" /><img src="'.$portrait.'" class="homepage_mobile portrait_mobile" />';
 ?>
-        <div class="slide <?php echo $c['scheme'].$a; ?>"><a href="<?php echo $permalink; ?>"><?php echo $thumbnail.$thumbnail_mobile; ?></a></div>
+        <div class="slide no_transition <?php echo $c['scheme'].$a; ?>"><a href="<?php echo $permalink; ?>"><?php echo $thumbnail.$thumbnail_mobile; ?></a></div>
         <!-- div class="slide <?php echo $c['scheme'].$a; ?>"><?php echo $thumbnail.$thumbnail_mobile; ?></div -->
 <?php 
   $a = "";
 } ?>
+    <ul class="prevnext">
+      <li><span>Previous Slide</span></li>
+      <li><span>Next Slide</span></li>
+    </ul>
     </section>
+<?php 
+$content = get_field('homepage_content');
+if( $content ) {
+?>
     <section id="homepage_text">
       <input type="hidden" name="hpTextSpeed" value="<?php echo get_field('homepage_content_speed'); ?>" />
       <div id="homepage_text_container">
-<?php 
-$content = get_field('homepage_content');
+<?php
 $a = ' active';
 foreach($content as $c) {
 //print_r($content);
@@ -44,22 +53,8 @@ $link_id = $c['link']->term_id;
 } ?>
       </div>
     </section>
+<?php } ?>
   </div>
 <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
-
-
-<?php /*
-  $content = get_field('homepage_content');
-  $a = " active";
-  foreach($content as $c) {
-?>
-        <div class="slide <?php echo $c['scheme'].$a; ?>">
-          <div class="padding">
-<?php echo $c['content_area']; ?>
-          </div>
-        </div>
-<?php 
-  $a = "";
-} */ ?>

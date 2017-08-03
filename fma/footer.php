@@ -1,6 +1,11 @@
 <?php
 $t = explode ("/",get_page_template());
 $template = end($t);
+
+$email = get_field("footer_email", "options");
+$phoneLink = get_field("footer_phone_link", "options");
+$phoneDisplay = get_field("footer_phone_display", "options");
+$maps = get_field("footer_google_maps_url", "options");
 ?>
 <?php if($template!='template-home.php') {  ?>
     <p class="back_to_top"><span>Back to Top</span></p>
@@ -10,16 +15,16 @@ $template = end($t);
 <?php if(is_front_page()) { ?>
   <div id="mobile_toolbar">
     <ul>
-      <li class="email"><a href="mailto:info@fradkinmcalpin.com"><span>Email</span></a></li>
-      <li class="phone"><a href="tel:2125295740"><span>Phone</span></a></li>
-      <li class="map"><a href="https://www.google.com/maps/place/920+Broadway,+New+York,+NY+10010/@40.7395115,-73.9894268,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259a3db01f895:0xb9cec749a1d596c8" target="_blank"><span>Directions</span></a></li>
+      <li class="email"><a href="mailto:<?= $email ?>"><span>Email</span></a></li>
+      <li class="phone"><a href="tel:<?= $phoneLink ?>"><span>Phone</span></a></li>
+      <li class="map"><a href="<?= $maps ?>" target="_blank"><span>Directions</span></a></li>
     </ul>
   </div>
 <?php } ?>
   <footer>
   <div id="wrapper_footer">
     <div id="container_footer">
-      <div class="line"><a href="tel:2125295740">(212) 529-5740</a> • <a href="mailto:">Email</a> • <a href="https://www.instagram.com/fradkinmcalpin/">Instagram</a></div>
+      <div class="line"><a href="tel:<?= $phoneLink ?>"><?= $phoneDisplay ?></a> • <a href="mailto:<?= $email ?>">Email</a> • <a href="https://www.instagram.com/fradkinmcalpin/" target="_blank">Instagram</a></div>
       <div class="line search"><div class="search_container"><?php get_search_form(); ?></div></div>
     </div>
   </div>

@@ -16,13 +16,12 @@ Template Name: Studio (Top-Level)
 <?php if(have_posts()): ?>
 <?php while(have_posts()) : the_post();
   $thisID = get_the_id();
-  require('subpages.php');
   $childPages = getChildPages($thisID); ?>
     
 <!-- SUBNAV -->
       <div id="subnav">
         <div id="subnav_container">
-<?php childPageMenu($childPages); ?>
+<?php //childPageMenu($childPages); ?>
         <div id="quote_wrapper">
           <div id="quote_container" class="fma_slideshowwww">
           <input type="hidden" name="quote_speed" value="<?php echo get_field('quotes_speed'); ?>" />

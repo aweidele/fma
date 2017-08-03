@@ -7,20 +7,13 @@ Template Name: Contact
 <?php 
 if(have_posts()): while(have_posts()): the_post();
 $thisID = get_the_id();
-require('subpages.php');
 $childPages = getChildPages($thisID);
 ?>
-<!-- SUBNAV -->
-      <div id="subnav">
-        <div id="subnav_container">
-<?php childPageMenu($childPages); ?>
-        </div><!-- #subnav_container -->
-      </div><!-- #subnav -->
-      
+     
       <!-- CONTENT -->
       <div id="contact_content" class="sectionedContent">
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ihIJwce3FXPV63_Ic3dCbQAhBG1qOUc&v=3.exp&sensor=false"></script>
     <script>
 var map;
 var fma = new google.maps.LatLng(40.7514055,-73.9852373);

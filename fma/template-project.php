@@ -1,9 +1,6 @@
-<?
+<?php
 /* Template Name: Projects */
 get_header();
-$themes = get_terms( 'theme' );
-$types = get_terms( 'type' );
-
 $currentURL =  explode("?",$_SERVER["REQUEST_URI"]);
 $thisPage = $currentURL[0];
 
@@ -35,19 +32,6 @@ function sortclass($sort) {
       <div id="project_container">
         <div class="project_top_left">
           <h2><?php echo $post->post_title; ?></h2>
-          <ul class="categories">
-<?php foreach($themes as $t) { ?>
-            <li><a href="<?php echo get_term_link($t->name, 'theme'); ?>"><?php echo $t->name; ?></a></li>
-<?php } ?>
-            <li class="featured">By Type
-              <ul>
-<?php foreach($types as $t) { ?>
-            <li><a href="<?php echo get_term_link($t->name, 'type'); ?>"><?php echo $t->name; ?></a></li>
-<?php } ?>          
-              </ul>
-            </li>
-            <li class="catActive"><a href="<?php echo get_permalink(19); ?>">View All</a></li>  
-          </ul><!-- categories menu -->
         </div>
         <ul class="project_view">
           <li class="grid"><a href="<?php echo $thisPage; ?>">Grid View</a></li>
@@ -205,11 +189,11 @@ if(get_field('listing_type') == 'grid') {
             <ul class="slideshow">
 <?php 
 $active = ' class="active"';
-foreach($gallery as $thumb) { ?>
+if( $gallery ) : foreach($gallery as $thumb) { ?>
               <li<?php echo $active; ?>><img src="<?php echo $thumb['sizes']['Project Index']; ?>" width="<?php echo $thumb['sizes']['Project Index-width']; ?>" height="<?php echo $thumb['sizes']['Project Index-height']; ?>" /></li>
 <?php 
 $active = '';
-} ?>
+} endif; ?>
             </ul>
 <?php if(sizeof($gallery) > 1) { ?>
             <ul class="nextprev">

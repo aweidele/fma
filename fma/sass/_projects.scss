@@ -48,11 +48,10 @@
   
   $viewIconSize: 17px;
   ul.project_view {
-    width: 20%;
     float: right;
     padding-top: 103px;
     li {
-      display: block;
+      display: inline-bock;
       height: $viewIconSize;
       line-height: $viewIconSize;
       margin-bottom: 5px;
@@ -556,7 +555,6 @@ $ptitle_height: 51px;
     
     h3 { 
       @extend .freightmed;
-      font-weight: normal;
     }
     
     h3.share {

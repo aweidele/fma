@@ -13,7 +13,18 @@ $newStopHeight: 161px;
     @extend .mdb;
     font-size: 1.500em;
     font-weight: bold;
-    padding: 72px 20px 0px 20px;
+    padding: 101px 20px 0px 20px;
+    
+    .media_inquiry {
+    	float: right;
+    	
+    	a {
+    		text-decoration: none;
+    		color: inherit;
+    		font-size: 0.666em;
+    		font-size: 1rem;
+    	}
+    }
   }
   
   ul {
@@ -179,6 +190,32 @@ $postWidth: 370px;
       text-transform: uppercase;
       margin-top: 1em;
       a { text-decoration: none; }
+    }
+    
+    .instagram {
+    	@extend .freight;
+	    @extend .letter_spacing;
+	    
+    	font-size: 0.750em;
+    	margin-top: 1em;
+      	
+        height: 16px;
+      
+       .likes, .comments {
+      	 float: right;
+      	
+      	 padding: 2px 8px 2px 22px;
+      	 height: 12px;
+      	 display: inline-block;
+       }
+      
+      .likes {
+      	background: url('image/instagram_liked.png') no-repeat left top;
+      }
+      .comments {
+      	background: url('image/instagram_comments.png') no-repeat left top;
+     	 padding-right: 0px;
+      }
     }
     
     p.quote_attribution {

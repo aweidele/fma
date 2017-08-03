@@ -1,9 +1,6 @@
-<?
+<?php
 /* Template Name: Projects */
 get_header();
-$themes = get_terms( 'theme' );
-$types = get_terms( 'type' );
-
 $currentURL =  explode("?",$_SERVER["REQUEST_URI"]);
 $thisPage = $currentURL[0];
 
@@ -13,19 +10,6 @@ $term =	$wp_query->queried_object;
       <div id="project_container">
         <div class="project_top_left">
           <h2><?php echo get_the_title(19); ?>: <?php echo $term->name; ?></h2>
-          <ul class="categories">
-<?php foreach($themes as $t) { ?>
-            <li<?php if($t->term_id == $term->term_id) { echo ' class="catActive"'; } ?>><a href="<?php echo get_term_link($t->name, 'theme'); if(isset($_GET['view']) && $_GET['view']=='list') { echo '?view=list'; } ?>"><?php echo $t->name; ?></a></li>
-<?php } ?>
-            <li class="featured">By Type
-              <ul>
-<?php foreach($types as $t) { ?>
-            <li><a href="<?php echo get_term_link($t->name, 'type'); if(isset($_GET['view']) && $_GET['view']=='list') { echo '?view=list'; } ?>"><?php echo $t->name; ?></a></li>
-<?php } ?>         
-              </ul>
-            </li>
-            <li><a href="<?php echo get_permalink(19); ?>">View All</a></li>  
-          </ul><!-- categories menu -->
         </div>
         <ul class="project_view">
           <li class="grid"><a href="<?php echo $thisPage; ?>">Grid View</a></li>

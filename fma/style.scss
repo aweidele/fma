@@ -33,10 +33,10 @@ a { transition: color 0.5s; }
 }
 
 
-.freight { font-family: "Freight Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
-.freightmed { font-family: "Freight Sans Medium","Helvetica Neue",Helvetica,Arial,sans-serif; }
-.mdb { font-family: "MillerDisplay",Georgia,Times,serif; }
-.mdblite { font-family: "MillerDisplay Light",Georgia,Times,serif; }
+.freight { font-family: "freight-sans-pro", "Freight Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+.freightmed { font-family: "freight-sans-pro", "Freight Sans Medium","Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: 500; }
+.mdb { font-family: "miller-display",Georgia,Times,serif; }
+//.mdblite { font-family: "MillerDisplay Light",Georgia,Times,serif; }
 .helvetica { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 .glyphs { font-family: 'icomoon'; }
 
@@ -187,10 +187,8 @@ $bio_spacing: 30px;
     li {
       @extend .mdb;
       @include px2em(18);
-      height: 50px;
       border-bottom: 1px solid $lightgray;
       background-color: $white;
-      transition: background-color 0.5s;
       
       &:first-child { border-top: 1px solid $lightgray; }
       
@@ -199,7 +197,6 @@ $bio_spacing: 30px;
         display: block;
         line-height: 50px;
         
-        font-weight: bold;
         text-decoration: none;
         display: block;
         //padding: 17px 17px 17px 48px;
@@ -207,10 +204,28 @@ $bio_spacing: 30px;
         color: $medgray;
       }
       
-      &:hover,&.current-menu-item  {
-        background-color: $bluegray;
-        a { color: $black; }
+      &:hover,&.current-menu-item,&.active {
+        > a { 
+        	color: $black; 
+            font-weight: bold;
+        
+        }
       }
+    }
+    
+    ul.nested {
+    	margin-top: -5px;
+    	li {
+    		border: 0;
+    		font-size: 1em;
+    		padding: 5px 0;
+    		
+    		a {
+	    		padding-left: 58px;
+	    		padding-right: 25px;
+    			line-height: 120%;
+    		}
+    	}
     }
     
     &.mobile { display: none; } 
@@ -279,12 +294,12 @@ $bio_spacing: 30px;
   
   
   #quote_wrapper {
-    padding: 0 40px;
+    padding: 14px 40px 0 40px;
   }
   #quote_container {
     position: relative;
     
-    .slide {
+    .slide { 
       position: absolute;
       top: 0px;
       left: 0px;
@@ -303,8 +318,8 @@ $bio_spacing: 30px;
           width: 75%;
           float: right;
           text-align: right;
-          font-style: normal;
-        }
+          font-style: normal; 
+        } 
       
       }
       
@@ -312,13 +327,13 @@ $bio_spacing: 30px;
     }
   }
   
-}
+} 
 
 ul.prevnext {
   position: absolute;
   z-index: 200;
   bottom: 0px;
-  right: 0px;
+  right: 0px; 
       
   li {
     width: 32px;
@@ -342,3 +357,4 @@ ul.prevnext {
 @import 'sass/search';
 @import 'sass/footer';
 @import 'sass/mobile';
+@import 'sass/columns';

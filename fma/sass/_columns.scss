@@ -1,0 +1,32 @@
+@media screen and (min-width: 500px) {
+	@mixin create-cols($total) {
+		.column_#{$total} {
+			float: left;
+			width: (100% - (($total - 1) * 5%))/ $total;
+			margin-left: 2.5%; 
+			margin-right: 2.5%;
+			
+			p:empty { display:none; }
+		}
+	}
+	
+	.clearFloats {
+		clear: left;
+	}
+	div.column_last {
+		margin-right: 0;
+	}
+	div.column_first {
+		margin-left: 0;
+	}
+	
+	@include create-cols(2);
+	@include create-cols(3);
+	@include create-cols(4);
+	@include create-cols(5);
+	@include create-cols(6);
+	@include create-cols(7);
+	@include create-cols(8);
+	@include create-cols(9);
+	@include create-cols(10);
+}
